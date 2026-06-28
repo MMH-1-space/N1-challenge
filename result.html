@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>N1 Master - 結果</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="icon" href="images/icon.png">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+
+<div class="logo">
+    📚 N1 Master
+</div>
+
+        <nav>
+            <a href="index.html">🏠 ホーム</a>
+            <a href="quiz.html">📚 クイズ</a>
+            <a href="result.html" class="active">📊 成績</a>
+            <a href="settings.html">⚙ 設定</a>
+        </nav>
+
+        <div class="side-card">
+            <h3>🏆 成績確認</h3>
+            <p>結果を見て、次の学習に活かしましょう。</p>
+        </div>
+
+    </aside>
+
+    <!-- メイン -->
+    <main class="main-content">
+
+        <section class="result-card">
+
+            <h1>🎉 結果発表</h1>
+
+            <h2 id="scoreText">
+                0 / 10 点
+            </h2>
+
+            <h3 id="rateText">
+                正答率 0%
+            </h3>
+
+            <h3 id="rankText">
+                ランク -
+            </h3>
+
+            <h3 id="categoryText">
+                カテゴリ -
+            </h3>
+
+            <h3 id="bestScore">
+                最高得点 0 / 10
+            </h3>
+
+            <h3 id="playCount">
+                プレイ回数 0回
+            </h3>
+
+            <div class="result-buttons">
+
+                <button onclick="location.href='quiz.html'">
+                    🔄 もう一度挑戦
+                </button>
+
+                <button onclick="location.href='index.html'">
+                    🏠 ホームへ戻る
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="JS/theme.js"></script>
+<script src="JS/result.js"></script>
+
+</body>
+</html>

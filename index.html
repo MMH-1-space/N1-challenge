@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>N1 Master Ver.2</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+
+<link rel="icon" href="images/icon.png">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================
+         Sidebar
+    ====================== -->
+
+    <aside class="sidebar">
+
+     <div class="logo">
+    📚 N1 Master
+</div>
+
+        <nav>
+
+            <a href="index.html" class="active">
+                🏠 ホーム
+            </a>
+
+            <a href="#" onclick="startQuiz('vocabulary')">
+                📚 語彙
+            </a>
+
+            <a href="#" onclick="startQuiz('kanji')">
+                🈶 漢字
+            </a>
+
+            <a href="#" onclick="startQuiz('grammar')">
+                📝 文法
+            </a>
+
+            <a href="result.html">
+                📊 成績
+            </a>
+
+            <a href="settings.html">
+                ⚙ 設定
+            </a>
+
+        </nav>
+
+        <div class="side-card">
+
+            <h3>🎯 今日の目標</h3>
+
+            <p>
+                今日は10問だけでも挑戦しましょう。<br>
+                毎日の積み重ねがN1合格につながります。
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- =====================
+         Main
+    ====================== -->
+
+    <main class="main-content">
+                <!-- =====================
+             Top Header
+        ====================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="badge">
+                    JLPT N1 Learning System
+                </span>
+
+                <h1>
+                    日本語を、もっと強く。
+                </h1>
+
+                <p>
+                    JLPT N1 合格を目指す総合学習システム
+                </p>
+
+            </div>
+
+            <div class="user-box">
+
+                👤 Student
+
+            </div>
+
+        </header>
+
+        <!-- =====================
+             Dashboard
+        ====================== -->
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>📚 語彙</h3>
+                <p id="vocabularyCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>🈶 漢字</h3>
+                <p id="kanjiCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 文法</h3>
+                <p id="grammarCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 総問題数</h3>
+                <p id="totalQuestionsCard">0</p>
+            </div>
+
+            <div class="card">
+                <h3>🏆 最高得点</h3>
+                <p id="bestScoreCard">0</p>
+            </div>
+
+            <div class="card">
+                <h3>🎮 プレイ回数</h3>
+                <p id="playCountCard">0</p>
+            </div>
+
+        </section>
+                <!-- =====================
+             Quiz Select
+        ====================== -->
+
+        <section class="quiz-section">
+
+            <h2>📖 クイズを選択</h2>
+
+            <p style="margin-bottom:25px;color:#64748b;">
+                学習したいカテゴリーを選んでください。
+            </p>
+
+            <div class="quiz-grid">
+
+                <button
+                    class="quiz-btn"
+                    onclick="startQuiz('vocabulary')">
+
+                    <img
+                        src="images/icons/vocabulary.png"
+                        alt="語彙">
+
+                    <div>
+
+                        <h3>📚 語彙</h3>
+
+                        <p>Vocabulary</p>
+
+                    </div>
+
+                </button>
+
+                <button
+                    class="quiz-btn"
+                    onclick="startQuiz('kanji')">
+
+                    <img
+                        src="images/icons/kanji.png"
+                        alt="漢字">
+
+                    <div>
+
+                        <h3>🈶 漢字</h3>
+
+                        <p>Kanji</p>
+
+                    </div>
+
+                </button>
+
+                <button
+                    class="quiz-btn"
+                    onclick="startQuiz('grammar')">
+
+                    <img
+                        src="images/icons/grammar.png"
+                        alt="文法">
+
+                    <div>
+
+                        <h3>📝 文法</h3>
+
+                        <p>Grammar</p>
+
+                    </div>
+
+                </button>
+
+                <button
+                    class="quiz-btn"
+                    onclick="startQuiz('random')">
+
+                    <img
+                        src="images/icon.png"
+                        alt="Random">
+
+                    <div>
+
+                        <h3>🎲 ランダム</h3>
+
+                        <p>Random Quiz</p>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+                <!-- =====================
+             Study Status
+        ====================== -->
+
+        <section class="glass-card mt-20">
+
+            <h2>📈 学習状況</h2>
+
+            <div class="study-info">
+
+                <div class="study-item">
+                    <h3>🔥 今日の目標</h3>
+                    <p>10問以上解こう！</p>
+                </div>
+
+                <div class="study-item">
+                    <h3>⭐ 現在のレベル</h3>
+                    <p>N1 チャレンジャー</p>
+                </div>
+
+                <div class="study-item">
+                    <h3>🎯 学習カテゴリ</h3>
+                    <p id="currentCategory">
+                        ランダム
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================
+             Start Button
+        ====================== -->
+
+        <section class="start-section">
+
+            <button
+                id="startBtn"
+                onclick="startQuiz('random')">
+
+                🚀 学習開始
+
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+<!-- =====================
+     JavaScript Files
+====================== -->
+
+<script src="JS/vocabulary.js"></script>
+<script src="JS/kanji.js"></script>
+<script src="JS/grammar.js"></script>
+<script src="JS/app.js"></script>
+<script src="JS/theme.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const vocabularyCount =
+        typeof vocabularyQuestions !== "undefined"
+            ? vocabularyQuestions.length
+            : 0;
+
+    const kanjiCount =
+        typeof kanjiQuestions !== "undefined"
+            ? kanjiQuestions.length
+            : 0;
+
+    const grammarCount =
+        typeof grammarQuestions !== "undefined"
+            ? grammarQuestions.length
+            : 0;
+
+    const totalQuestions =
+        vocabularyCount + kanjiCount + grammarCount;
+
+    document.getElementById("vocabularyCount").textContent =
+        vocabularyCount;
+
+    document.getElementById("kanjiCount").textContent =
+        kanjiCount;
+
+    document.getElementById("grammarCount").textContent =
+        grammarCount;
+
+    document.getElementById("totalQuestionsCard").textContent =
+        totalQuestions;
+
+    document.getElementById("bestScoreCard").textContent =
+        localStorage.getItem("bestScore") || 0;
+
+    document.getElementById("playCountCard").textContent =
+        localStorage.getItem("playCount") || 0;
+
+});
+
+function startQuiz(category) {
+    localStorage.setItem("selectedCategory", category);
+    window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>

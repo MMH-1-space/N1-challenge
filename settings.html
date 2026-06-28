@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>設定 - N1 Master</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="icon" href="images/icon.png">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+<div class="logo">
+    📚 N1 Master
+</div>
+
+        <nav>
+            <a href="index.html">🏠 ホーム</a>
+            <a href="quiz.html">📚 クイズ</a>
+            <a href="result.html">📊 成績</a>
+            <a href="settings.html" class="active">⚙ 設定</a>
+        </nav>
+
+        <div class="side-card">
+            <h3>⚙ 設定</h3>
+            <p>学習スタイルに合わせて変更できます。</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <span class="badge">Settings</span>
+                <h1>⚙ 設定</h1>
+                <p>N1 Master の学習環境を変更できます。</p>
+            </div>
+
+            <div class="user-box">
+                👤 Student
+            </div>
+
+        </header>
+
+        <section class="settings-container">
+
+            <div class="setting-card">
+
+                <h2>テーマ</h2>
+
+                <button id="lightBtn" class="setting-btn">
+                    ☀ ライトモード
+                </button>
+
+                <button id="darkBtn" class="setting-btn">
+                    🌙 ダークモード
+                </button>
+
+            </div>
+
+            <div class="setting-card">
+
+                <h2>出題数</h2>
+
+                <select id="questionCount">
+                    <option value="10">10問</option>
+                    <option value="20">20問</option>
+                    <option value="50">50問</option>
+                    <option value="100">100問</option>
+                </select>
+
+            </div>
+
+            <div class="setting-card">
+
+                <h2>学習データ</h2>
+
+                <button id="resetBtn" class="danger-btn">
+                    🗑 データ初期化
+                </button>
+
+            </div>
+
+            <div class="setting-card">
+
+                <button onclick="location.href='index.html'" class="back-btn">
+                    ← ホームへ戻る
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="JS/theme.js"></script>
+<script src="JS/settings.js"></script>
+
+</body>
+</html>

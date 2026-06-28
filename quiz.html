@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>N1 Master - クイズ</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="icon" href="images/icon.png">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+
+       <div class="logo">
+    📚 N1 Master
+</div>
+
+        <nav>
+            <a href="index.html">🏠 ホーム</a>
+            <a href="#" onclick="startQuiz('vocabulary')">📚 語彙</a>
+            <a href="#" onclick="startQuiz('kanji')">🈶 漢字</a>
+            <a href="#" onclick="startQuiz('grammar')">📝 文法</a>
+            <a href="result.html">📊 成績</a>
+            <a href="settings.html">⚙ 設定</a>
+        </nav>
+
+        <div class="side-card">
+            <h3>🔥 学習中</h3>
+            <p>落ち着いて、1問ずつ確認しましょう。</p>
+        </div>
+
+    </aside>
+
+    <!-- メイン画面 -->
+    <main class="main-content">
+
+        <!-- 上部バー -->
+        <header class="topbar">
+
+            <div>
+                <span class="badge">Quiz Mode</span>
+
+                <h1 id="categoryTitle">
+                    クイズ
+                </h1>
+
+                <p>
+                    正しい答えを選んでください
+                </p>
+            </div>
+
+            <div class="user-box">
+                👤 学習中
+            </div>
+
+        </header>
+
+        <!-- 進捗 -->
+        <section class="progress-section">
+
+            <div class="progress-header">
+
+                <span id="progress">
+                    問題 1 / 10
+                </span>
+
+                <span id="scoreText">
+                    Score : 0
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+
+        </section>
+
+        <!-- クイズカード -->
+        <section class="quiz-card">
+
+            <div class="question-area">
+
+                <h1 id="question">
+                    問題を読み込み中...
+                </h1>
+
+            </div>
+
+            <div id="choices" class="choices-area"></div>
+
+            <div id="explanation" class="explanation-box hidden"></div>
+
+            <button id="nextBtn" class="next-btn hidden">
+                次の問題へ
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="JS/theme.js"></script>
+<script src="JS/vocabulary.js"></script>
+<script src="JS/kanji.js"></script>
+<script src="JS/grammar.js"></script>
+<script src="JS/data.js"></script>
+<script src="JS/quiz.js"></script>
+
+</body>
+</html>
